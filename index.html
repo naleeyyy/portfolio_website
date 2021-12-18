@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <section class="container-fluid bg-dark" id="main">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent navbar-fixed-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                  <!-- <img src="images/logo2.png" alt="" width="10%" height="100%" class="d-inline-block none" id="title-img">  -->
+                  Portfolio
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn" id="mode-toggle">
+                            <img src="icons/weather-night.png" id="night-toggle-image" alt="">
+                        </button>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Coming Soon</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="container">
+              <div class="animation">
+                    <h1 id="header">
+                        Web
+                        <div id="typed-strings">
+                            <p>Design.</p>
+                            <p>Development.</p>
+                            <p>Deployment.</p>
+                        </div>
+                        <span class="lime" id="typed"></span>
+                    </h1>
+                </div>
+                <a href="about.html"><button class="btn btn-outline-success lime" id="btn">Learn More</button></a>
+          </div>
+    </section>
+    <script src="node_modules/typed.js/lib/typed.js"></script>
+    <script>
+        $('document').ready(function(){
+            var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                backSpeed: 100,
+                typeSpeed: 100,
+                backDelay: 1000,
+                loop: true
+            })
+        })
+    </script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
